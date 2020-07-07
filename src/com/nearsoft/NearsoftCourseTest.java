@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class HelloWorld {
+public class NearsoftCourseTest {
    public static void main(String[] args) throws InterruptedException {
         //Declaration and instance of drivers.
         //Setup
@@ -16,12 +16,12 @@ public class HelloWorld {
         Utilities.printMessage("The URL is: "+ Constants.PRACTICE_SELENIUM_URL);
 
         //Functions
-        WebElement HerbalTeaButton = driver.findElement
+        WebElement herbalTeaButton = driver.findElement
                 (By.id("wsb-button-00000000-0000-0000-0000-000450914890"));
         Utilities.printMessage("Element found.");
-        HerbalTeaButton.click();
+        herbalTeaButton.click();
         Utilities.printMessage("Button clicked.");
-        
+
         driver.close();
         driver.quit();
         Utilities.printMessage("The browser is closed.");
