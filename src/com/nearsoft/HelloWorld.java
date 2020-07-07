@@ -21,10 +21,9 @@ public class HelloWorld {
         Utilities.printMessage("Element found.");
         HerbalTeaButton.click();
         Utilities.printMessage("Button clicked.");
-
-        //Close
-        driver.close(); //Close only a single windows.
-        driver.quit(); //Close all windows.
+        
+        driver.close();
+        driver.quit();
         Utilities.printMessage("The browser is closed.");
    }
 }
