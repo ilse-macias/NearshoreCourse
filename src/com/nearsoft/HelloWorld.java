@@ -1,4 +1,4 @@
-package com.example.helloworld;
+package com.nearsoft;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,17 +7,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HelloWorld {
    public static void main(String[] args) throws InterruptedException {
-        String valueDriverSetProperty = "webdriver.chrome.driver";
-        String pathSetProperty = "/Users/ilsemacias/Desktop/drivers/chromedriver";
-        String url = "http://www.practiceselenium.com/";
-
         //Declaration and instance of drivers.
         //Setup
-        System.setProperty(valueDriverSetProperty, pathSetProperty);
+        System.setProperty(Constants.VALUE_DRIVER_SET_PROPERTY, Constants.PATH_SET_PROPERTY);
         WebDriver driver = new ChromeDriver();
         driver.manage().deleteAllCookies();
-        driver.get(url);
-        Utilities.printMessage("The URL is: "+ url);
+        driver.get(Constants.PRACTICE_SELENIUM_URL);
+        Utilities.printMessage("The URL is: "+ Constants.PRACTICE_SELENIUM_URL);
 
         //Functions
         WebElement HerbalTeaButton = driver.findElement
